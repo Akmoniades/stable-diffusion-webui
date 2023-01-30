@@ -106,7 +106,7 @@ fi
 # Check prerequisites
 gpu_info=$(lspci 2>/dev/null | grep VGA)
 case "$gpu_info" in
-    *"Navi 1"*|*"Navi 2"*) export HSA_OVERRIDE_GFX_VERSION=10.3.0
+    *"Navi 1"*|*"Navi 2"*|"Navi 3"*|) export HSA_OVERRIDE_GFX_VERSION=10.3.0
     ;;
     *"Renoir"*) export HSA_OVERRIDE_GFX_VERSION=9.0.0
         printf "\n%s\n" "${delimiter}"
